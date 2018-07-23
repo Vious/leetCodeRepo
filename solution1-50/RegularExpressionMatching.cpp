@@ -27,7 +27,7 @@ public:
 		return false;
 	}*/
 
-	// Dynamic programming
+	// Dynamic programming, beats 100%
 	bool isMatch(string s, string p) {
 		if (p.empty()) {
 			return s.empty();
@@ -61,13 +61,13 @@ public:
 	}
 };
 
-int main()
-{
-	int input = 123321;
-	Solution sl;
-	string a = "123456789";
-	cout << "Anwser is: " << sl.isMatch("aab", "c*a*b") << '\n';
-
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	int input = 123321;
+//	Solution sl;
+//	string a = "123456789";
+//	cout << "Anwser is: " << sl.isMatch("aab", "c*a*b") << '\n';
+//
+//	system("pause");
+//	return 0;
+//}
