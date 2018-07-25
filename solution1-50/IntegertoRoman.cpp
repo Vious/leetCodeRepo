@@ -107,16 +107,16 @@ public:
 
 
 
-int main()
-{
-	Solution sl;
-	while (1) {
-		int input;
-		cout << "please input a number: ";
-		cin >> input;
-		if (input == 0) break;
-		cout << "Anwser is: " << sl.intToRoman(input) << '\n';
-	}
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	Solution sl;
+//	while (1) {
+//		int input;
+//		cout << "please input a number: ";
+//		cin >> input;
+//		if (input == 0) break;
+//		cout << "Anwser is: " << sl.intToRoman(input) << '\n';
+//	}
+//	system("pause");
+//	return 0;
+//}
