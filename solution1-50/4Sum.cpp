@@ -40,18 +40,13 @@ public:
                }
         }
         if (results.empty()) return results;
-        auto lenOfRes = results.size();
-        cout << "size :" << lenOfRes << endl;
-        for (decltype(lenOfRes) i = 0; i < results.size() - 1; i++) {
-            if (results[i] == results[i + 1]) {
-                cout << i << "\n";
-
-                for (int j = 0; j < results[i].size(); j++) {
-                    cout << results[i][j];
+        for (decltype(results.size()) i = 0; i < results.size() - 1; i++) {
+            for (decltype(i) j = i + 1; j < results.size(); j++) {
+                if (results[i] == results[j]) {
+                    results.erase(results.begin() + (j));
+                    j--;
+                    i--;
                 }
-                results.erase(results.begin() + (i));
-                i--;
-                cout << "size :" << results.size() << endl;
             }
         }
 
