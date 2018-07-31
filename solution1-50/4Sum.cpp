@@ -41,11 +41,20 @@ public:
         }
         if (results.empty()) return results;
         auto lenOfRes = results.size();
-        for (decltype(results.size()) i = 0; i < lenOfRes - 1; i++) {
+        cout << "size :" << lenOfRes << endl;
+        for (decltype(lenOfRes) i = 0; i < results.size() - 1; i++) {
             if (results[i] == results[i + 1]) {
-                results.erase(results.begin() + i);
+                cout << i << "\n";
+
+                for (int j = 0; j < results[i].size(); j++) {
+                    cout << results[i][j];
+                }
+                results.erase(results.begin() + (i));
+                i--;
+                cout << "size :" << results.size() << endl;
             }
         }
+
         return results;
         
     }
