@@ -16,7 +16,7 @@ public:
 
 int main(int argc, char const *argv[])
 {
-    
+    string str;
     return 0;
 }
 
