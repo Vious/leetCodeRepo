@@ -100,6 +100,14 @@ int main(int argc, char const *argv[])
         pt = pt->next;
         //delete tmp;
     }
+    ListNode *p3 = new ListNode(1);
+    pt = p3;
+    for (int i = 2; i <= 10; i++) {
+        ListNode *tmp = new ListNode(i);
+        pt->next = tmp;
+        pt = pt->next;
+        //delete tmp;
+    }
     ListNode *res = sl.mergeTwoLists(p1, p2);
     while(res->next != NULL) {
         cout << res->val << " ";
