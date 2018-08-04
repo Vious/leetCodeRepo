@@ -5,10 +5,12 @@
 
 using namespace std;
 
+
+// static int x = [](){ios::sync_with_stdio(false); cin.tie(nullptr); return 0; }();
+
 class Solution {
 public:
     // dynamic programming
-    // static int x = [](){ios::sync_with_stdio(false); cin.tie(nullptr); return 0; }();
 
     int longestValidParentheses(string s) {
         if (s.empty()) return 0;
