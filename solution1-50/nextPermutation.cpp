@@ -6,37 +6,28 @@ using namespace std;
 
 class Solution {
 public:
-    void nextPermutation(vector<int>& nums) {
+    void nextPermutation(vector<int> &nums) {
         /* next_permutation(nums.begin(), nums.end());
         return; */
 
         //my implementation
         auto len = nums.size();
-        if (len < 2) return;
-        decltype(len) traves = -1;
-        for (decltype(len) i = len - 1; i >= 1; i--) {
-            if (nums[i] > nums[i - 1]) {
-                traves = i;
-                break;
-            }
-        }
-        if (traves == - 1) {
-            sort(nums.begin(), nums.end());
-            return;
-        } else {
-            decltype(len) index;
-            for (decltype(len) i = traves; i >= 0; i--) {
-                if (nums[i] < nums[traves]) {
-                    index = i;
-                    break;
-                }
-            }
-            int tmp = nums[index];
-            nums[index] = nums[traves];
-            nums[traves] = tmp;
-            return ;
-        }
-        return;
+		if (len <= 1) {
+			return;
+		}
+
+		int index = nums.size() - 2;
+		while (index >=0 && nums[index] >= nums[index + 1]) {
+			index--;
+		}
+		if (index >= 0) {
+			int count = index + 1;
+			while (count < len && nums[count] > nums[index]) {
+				++count;
+			}
+			swap(nums[count - 1], nums[index]);
+		}
+		reverse(nums.begin() + index + 1, nums.end());
     }
 };
 
